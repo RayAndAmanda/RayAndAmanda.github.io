@@ -5,7 +5,7 @@
     </script>
     
     <h1>欢迎来到Ray's home</h1>
-
+    <h1 id="time"></h1>  
     <script> 
     $(document).ready(function(){
       $("#donghua").click(function(){
@@ -17,9 +17,20 @@
         $("#div1").fadeIn();
         $("#div2").fadeIn("slow");
         $("#div3").fadeIn(3000);
-  });
+        });
 
-
+        
+        setInterval(function(){
+            var currentdate = new Date();
+            var datetime = "Now: " + currentdate.getFullYear() + " /"  
+                + (currentdate.getMonth()+1)  + "/" 
+                +  currentdate.getDate() + " " 
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+            // var time = dt.getUTCDate()+dt.getDate()+"  "+dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+            $("#time").text(datetime)
+        } ,1000) 
     });
 
 
