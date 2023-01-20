@@ -5,22 +5,38 @@
     </script>
     
     <h1>欢迎来到Ray's home</h1>
-    
+
     <script> 
     $(document).ready(function(){
-      $("button").click(function(){
-        $("div").animate({left:'250px'});
+      $("#donghua").click(function(){
+        $("#div_donghua").animate({left:'250px'});
       });
+
+
+      $("#danru").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+  });
+
+
     });
+
+
     </script> 
     </head>
      
     <body>
-    <button>开始动画</button>
+    <button id="donghua">开始动画</button>
     <p>默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。 
     如果需要改变为，我们需要将元素的 position 属性设置为 relative, fixed, 或 absolute!</p>
-    <div style="background:#98bf21;height:100px;width:100px;position:absolute;">
+    <div  id="div_donghua" style="background:#98bf21;height:100px;width:100px;position:absolute;">
     </div>
+    <button id="danru">点击淡入 div 元素。</button>
+<br><br>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
     
     </body>
 </html>
